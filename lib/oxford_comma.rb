@@ -1,12 +1,15 @@
+require 'pry'
+
 def oxford_comma(array)
-  if array.length == 1
-    return array.join(" ")
-  elsif array.length == 2
-    return "#{array[0]} and #{array[1]}"
-  elsif array.length == 3
-    array[-1].insert(0, "and ")
+  if array.length < 3
+    array.join(" and ")
   else
-    array[-1].insert(0, "and ")
+    array.each do |fruit|
+      if array.index(fruit) == array.length - 1
+        array[-1].insert(0, "and ")
+      end
+    end
+    array.join(", ")
   end
-  array.join(", ")
+  
 end
