@@ -1,5 +1,3 @@
-
-
 def oxford_comma(a)
   if a.length == 0
     ""
@@ -9,7 +7,6 @@ def oxford_comma(a)
     a.join(" and ")
   else
     last= a.pop
-    "#{a.join(", ")}, and #{last}"
+    "#{a.join", "}, and #{last}"
   end
 end
-  
