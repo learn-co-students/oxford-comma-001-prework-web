@@ -1,10 +1,18 @@
 def oxford_comma(array)
-  if array.length == 1
+
+  number_of_words = array.length
+
+  if number_of_words == 1
     array.first
-  elsif array.length == 2
+
+  elsif number_of_words == 2
     array.first + " and " + array.last
-  else
-    last_word = array.pop
-    array.join(", ") + ", and " + last_word
+
+  elsif number_of_words > 2
+    last = array.pop
+    all_but_last = array.join(", ")
+    
+    all_but_last + ", and " + last
+
   end
 end
