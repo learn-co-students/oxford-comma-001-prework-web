@@ -8,5 +8,3 @@ def oxford_comma(array)
     array.join(',').split(',').insert(-1,'and ').join(', ') + slice_number.to_s
   end
 end
-
-p oxford_comma([1,2,3,4,5])
