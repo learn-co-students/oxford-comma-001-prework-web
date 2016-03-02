@@ -1,3 +1,4 @@
+## working code
 #soft code notes
 #if array length = 1, return
 #if array length = 2, return 1 and 2
@@ -16,20 +17,20 @@
 # puts newString
 # => "word1, word2, word3, and, word4"
 # 
-# i ran into a problem with "and," and needed to remove the comma
-# so my second train of thought lead me to believe i could 
-# simply insert "and" to the beginning of the last string in 
-# the array. it would look something like this:
+# i ran into a problem with "and," so my second train of thought
+# lead me to believe i could simply insert "and" to the beginning
+# of the last string in the array
+#
+#it would look something like this
 #
 #array[(array.length - 1)].prepend("and ")
-
-
-# code below was revised on march 2, 2016
+#
+#
+#
 
 def oxford_comma(array)
 
 length = array.length	
-lastIndex = length - 1
 #determine length of array to use in conditional statement below
 
 if length < 2
@@ -45,15 +46,11 @@ elsif length == 2
 	#i 
 
 else length > 2
-	array[lastIndex].prepend("and ")
-	string3 = array.join(", ")
-	string3
-
-	#old method -- 
-	# last_item = array.pop 	
+	last_item = array.pop 	
 	#remove last item from list and add it back later
-	#string3 = array.join(", ")
-	#string3 << ", and #{last_item}"
+	string3 = array.join(", ")
+	string3 << ", and #{last_item}" 
+	string3
 end 
 
 end
