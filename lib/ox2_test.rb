@@ -1,3 +1,5 @@
+array = ["chorizo", "capicola", "pastrami", "turkey", "ham", "spam"]
+
 def oxford_comma(array)
   if array.count == 2
     "#{array[0]} and #{array[1]}"
@@ -18,3 +20,5 @@ def oxford_comma(array)
     "#{array[0]}"
   end
 end
+
+oxford_comma(array)
