@@ -1,9 +1,9 @@
 def oxford_comma(arr)
 x = arr.length
 y = arr.last
-if arr.length == 1
-  arr.join(", ")
-elsif arr.length == 2
+#if arr.length == 1
+ # arr.join(", ")
+if arr.length == 2
   arr.pop
   arr << "and #{y}"
   arr.join(" ")
