@@ -1,9 +1,11 @@
 def oxford_comma(array)
-  output = ""
-
-  array.each do |word|
-    output << word
+  if array.size > 2
+    last_item = ", and #{array.pop}"
+  elsif array.size == 2
+    last_item = " and #{array.pop}"
+  else
+    last_item = "#{array.pop}"
   end
-
-  puts output
+    
+  return array.join(", ") + last_item
 end
