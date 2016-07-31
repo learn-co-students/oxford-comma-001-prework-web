@@ -7,7 +7,7 @@ elsif array.length == 2
   array.join ( " and " )
 else array.length >= 3
   variable = array.pop
-array.join( ', ') + ', and ' + variable
+array.join( ', ') + ', and ' << variable
   end
 
 
