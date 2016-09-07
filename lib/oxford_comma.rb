@@ -1,18 +1,16 @@
-def oxford_comma(array)
-  if array.count == 1
-    return array[0]
-  elsif array.count == 2
-    array.join(' and ')
-  elsif array.count == 3
-    return "#{array[0]}, #{array[1]}, and #{array[2]}"
-  elsif array.count > 3
-    counter = 0
-    str = ''
-    while counter < array.count - 1
-      str += array[counter] << ', '
-      counter += 1
+def oxford_comma(arr)
+  if arr.count == 1
+    return arr[0]
+  elsif arr.count == 2
+    return "#{arr[0]} and #{arr[1]}"
+  else
+    count = 0
+    str = ""
+    while count < arr.count-1
+      str << arr[count] + ", "
+      count += 1
     end
-    str += "and #{array[-1]}"
-    return str
+    str += "and #{arr[-1]}"
   end
+  str
 end
