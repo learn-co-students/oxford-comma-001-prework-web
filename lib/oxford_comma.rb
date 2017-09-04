@@ -1,23 +1,17 @@
-def oxford_comma(array)
-if array.length == 1
-array.join
-  elsif
-  array.length == 2
-  array.join(" and ")
-  elsif
-  array.length == 3
-  aaa = "and "
-  last = array.pop
-  last.insert(0,aaa)
-  array.join(", ")
-  array << last
-  array.join(", ")
-  else
-last = array.pop
-string_to_add_to_last = ", and "
-  string_to_add_to_last << last
-new = array.join(", ")
-  new << string_to_add_to_last
-end
-
+def oxford_comma(arr)
+  case
+  when arr.length == 1
+    arr[0]
+  when arr.length == 2
+    "#{arr[0]} and #{arr[1]}"
+  when arr.length == 3
+    "#{arr[0]}, #{arr[1]}, and #{arr[2]}"
+  when arr.length > 3
+    last_word = arr.pop
+    word = ""
+    arr.each do |w|
+      word << w << ", "
+    end
+    word << "and " << last_word
+  end
 end
